@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concesionaria de Autos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sección de inicio -->
+    <section id="inicio">
+        <header>
+            <div class="logo-container">
+                <img src="https://st.depositphotos.com/1826082/3098/v/450/depositphotos_30980817-stock-illustration-creative-automobile-logo-template.jpg" alt="Logo" id="logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#comparar">Comparar</a></li>
+                    <li><a href="#financiar">Financiar</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1>Bienvenido a nuestra Concesionaria</h1>
+        <p>Encuentra el auto de tus sueños con nosotros. ¡Explora nuestras opciones y servicios!</p>
+        <section id="inicio">
+            <div class="titulo-container">
+                <h1>Autoland</h1>
+            </div>
+        </section>
+    </section>
+
+    <!-- Sección de comparar autos -->
+    <section id="comparar">
+        <h2>Comparar Autos</h2>
+        <div class="productos-container">
+            <div class="producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb9ZH1pyRPFQ75ySFmclNEyenZLdDpMEV60w&s" alt="Auto 1">
+                <h3>Mazda CX-5 2.0 Touring</h3>
+                <button onclick="mostrarFormulario(Mazda CX-5 2.0 Touring)">Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFI57l3_walvsZLvbmK6eWPzgc_8AKIREcvw&s" alt="Auto 2">
+                <h3>Chevrolet Spark Gt Activ F.e Mt 1.2</h3>
+                <button onclick="mostrarFormulario(Chevrolet Spark Gt Activ F.e Mt 1.2)">Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_2X_747807-MCO79409229917_092024-F.webp" alt="Auto 3">
+                <h3>Renault Logan LIFE MT</h3>
+                <button onclick="mostrarFormulario(Renault Logan LIFE MT)">Comprar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de opciones de financiamiento -->
+    <section id="financiar">
+        <h2>Opciones de Financiamiento</h2>
+        <div class="opciones-financiamiento">
+            <button class="opcion" onclick="mostrarInfo('credito')">Crédito</button>
+            <button class="opcion" onclick="mostrarInfo('contado')">Contado</button>
+            <button class="opcion" onclick="mostrarInfo('auto')">Tomamos tu auto</button>
+        </div>
+        <div id="informacion" class="informacion">
+            <!-- La información cambiará dinámicamente aquí -->
+        </div>
+    </section>
+
+    <!-- Sección de servicios -->
+    <section id="servicios">
+        <h2>Servicios</h2>
+        <div class="opciones-servicios">
+            <button class="servicio" onclick="mostrarServicio('revision')">Revisión Técnica</button>
+            <button class="servicio" onclick="mostrarServicio('seguros')">Seguros para Autos</button>
+            <button class="servicio" onclick="mostrarServicio('asesoria')">Asesoría Financiera</button>
+        </div>
+        <div id="detalle-servicio" class="detalle-servicio">
+            <!-- La información cambiará dinámicamente aquí -->
+        </div>
+    </section>
+
+    <!-- Sección sobre nosotros -->
+    <section id="nosotros">
+        <h2>Nosotros</h2>
+        <p>Somos una concesionaria líder en venta de autos nuevos y usados, con más de 20 años de experiencia en el mercado.</p>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <div class="informacion-contacto">
+            <h3>Dirección</h3>
+            <p>Calle 87 #60-50, Barranquilla, Colombia</p>
+            <p>Horario de atención: Lunes a Viernes, 9:00 AM - 6:00 PM</p>
+        </div>
+        <div class="informacion-contacto">
+            <h3>Formas de Contacto</h3>
+            <p><strong>Teléfono:</strong> +57 123 456 7890</p>
+            <p><strong>Email:</strong> contacto@empresa.com</p>
+        </div>
+        <div class="informacion-contacto">
+            <h3>Síguenos en Redes Sociales</h3>
+            <p>
+                <a href="https://www.facebook.com/tuempresa" target="_blank">Facebook</a> | 
+                <a href="https://www.instagram.com/tuempresa" target="_blank">Instagram</a> | 
+                <a href="https://twitter.com/tuempresa" target="_blank">Twitter</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Formulario de contacto -->
+    <div id="formulario-container" class="formulario-container" style="display: none;">
+        <h3>Formulario de Contacto</h3>
+        <p>Por favor, llena el formulario y un asesor se pondrá en contacto contigo.</p>
+        <form id="formulario">
+            <input type="text" id="nombre" placeholder="Nombre" required>
+            <input type="email" id="correo" placeholder="Correo Electrónico" required>
+            <input type="tel" id="telefono" placeholder="Teléfono" required>
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="mensaje-confirmacion" style="display: none;">¡Gracias! Un asesor se pondrá en contacto contigo pronto.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
